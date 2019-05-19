@@ -30,7 +30,7 @@ export default function Home() {
         My main interests academically are in mathematics and computer science along with the hardware side of computing. Outside of academics I love being active, coding, reading about math, cooking, playing volleyball and sharing my experiences through making videos and photography.
           </p>
           <p>
-        Being from the west coast I love the outdoors and a good adventure. From skiing through the trees to a long day of hiking there is nothing better than exploring the outdoors. In addition, I love experimenting in the kitchen and trying to figure out new ways to not follow the recipe.
+        Being from the west coast I love getting outside and being active. From skiing through the trees to a long day of hiking there is nothing better than exploring the outdoors. In addition, I love experimenting in the kitchen and trying out new ways to not follow the recipe.
           </p>
           <p>
         Feel free to reach out, I’m always interested to meet new awesome people!
