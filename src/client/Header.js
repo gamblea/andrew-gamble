@@ -7,7 +7,7 @@ export default function Header() {
       <div className="col-*">
         <h1 className="title "><Link className="nav-link" to="/">Andrew Gamble</Link></h1>
 
-        <nav className="navbar navbar-expand-lg navbar-light justify-content-center align-items-center">
+        <nav className="navbar navbar-expand-lg navbar-light justify-content-center align-items-center align-self-center mx-auto">
           <div className="navbar-expand" id="navbarNavAltMarkup">
             <div className="navbar-nav">
               <Link className="nav-link-bigger nav-item nav-link" to="/">About</Link>

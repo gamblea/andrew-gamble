@@ -12,7 +12,7 @@ export default function InfoRow(props) {
         <h4>{subHeading}</h4>
         <p>{paragraph}</p>
       </div>
-      <div className="col-sm-4 logoConatainer" style={{ textAlign: 'right', overflow: 'none' }}>
+      <div className="col-sm-4 logoConatainer">
         <img src={photo} className="logo" alt="waterloo logo" />
       </div>
     </div>

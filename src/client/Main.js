@@ -5,8 +5,8 @@ import Academics from './Academics';
 
 export default function Main() {
   return (
-    <div className="row h-100 justify-content-center align-items-center">
-      <div className="col-*">
+    <div className="row">
+      <div className="col">
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/academics" component={Academics} />

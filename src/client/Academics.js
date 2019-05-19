@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import InfoRow from './InfoRow';
-import waterlooLogo from './images/waterlooLogo.png';
+import waterlooLogo from './images/waterlooLogoNew.png';
 import sfuLogo from './images/sfuLogoSmall.jpg';
 import fhLogo from './images/fhLogo.png';
 
@@ -25,7 +25,7 @@ export default function Academics() {
     the oppurtunity to take University level courses.
     In addition, to Academics I was the captain of the senior boys volleyball and
     led the Fraser Heights Clean Water Club that raised funds and awareness
-    for clean water projects throughout the community.`,
+    for clean water projects throughout the community. Graduated with a 97% average. Awarded the Bud Huzyk Passion for Mathematics Award  `,
     photo: fhLogo
   };
 

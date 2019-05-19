@@ -1,20 +1,49 @@
 import React, { Component } from 'react';
+import Logo from './Logo';
+
 import me from './images/meSmall.jpg';
+import instaLogo from './images/instaLogo.png';
+import wordpressLogo from './images/wordpressLogo.png';
+import youtubeLogo from './images/youtubePlayLogo.png';
+import linkedinLogo from './images/linkedinLogo.png';
+import githubLogo from './images/githubLogo.png';
+
+const logos = [
+  { photo: instaLogo, url: 'https://www.instagram.com/andrew_gamble' },
+  { photo: wordpressLogo, url: 'https://andrewgamblee.wordpress.com/' },
+  { photo: youtubeLogo, url: 'https://www.youtube.com/channel/UCdUc2TaPzSjy1xDlQtFGo4Q' },
+  { photo: linkedinLogo, url: 'https://www.linkedin.com/in/andrew-gamble-20900bb1/' },
+  { photo: githubLogo, url: 'https://github.com/gamblea/' }];
 
 export default function Home() {
   return (
-    <div className="row">
-      <div className="meWrapper col-sm">
-        <img src={me} className="me" alt="Andrew" />
+    <div>
+      <div className="row">
+        <div className="meWrapper col-md">
+          <img src={me} className="me" alt="Andrew" />
+        </div>
+        <div className="col-md align-self-center bioText">
+          <p>
+         Hi, I’m Andrew. I am an undergraduate student at the University of Waterloo, who enjoys eating pineapple on his pizza. I am eager learner and openly enjoy the process of expanding my understanding, either in the classroom or on my own.
+          </p>
+          <p>
+        My main interests academically are in mathematics and computer science along with the hardware side of computing. Outside of academics I love being active, coding, reading about math, cooking, playing volleyball and sharing my experiences through making videos and photography.
+          </p>
+          <p>
+        Being from the west coast I love the outdoors and a good adventure. From skiing through the trees to a long day of hiking there is nothing better than exploring the outdoors. In addition, I love experimenting in the kitchen and trying to figure out new ways to not follow the recipe.
+          </p>
+          <p>
+        Feel free to reach out, I’m always interested to meet new awesome people!
+          </p>
+          <p>
+        Andrew
+          </p>
+        </div>
       </div>
-      <div className="col-sm">
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec elit cursus, feugiat libero ac, consectetur risus. Proin nunc leo, placerat non mi vitae, pretium rhoncus lacus. Suspendisse in tempus enim, vel porta purus. Praesent fringilla risus id facilisis porta. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec nec neque dolor. Nunc rhoncus mi quis lacinia posuere. Pellentesque dolor sapien, scelerisque nec dignissim vitae, ornare vehicula nibh. Nullam aliquam velit ac felis feugiat semper.
-        </p>
-        <p>
-        Phasellus consequat commodo aliquet. Etiam feugiat massa magna, ultrices pharetra orci aliquet ut. Duis auctor erat nibh, at placerat felis pretium id. Aliquam in feugiat ipsum, luctus egestas enim. Nunc auctor semper convallis. Nulla felis arcu, condimentum ut elit in, pulvinar tincidunt erat. Vivamus ornare, ante at eleifend vehicula, justo eros porta est, id commodo leo elit vitae lacus. Suspendisse euismod rutrum diam, vitae sagittis odio tristique vel. Morbi dictum elementum ipsum non rhoncus. Vivamus semper, neque eget lacinia gravida, lacus magna lacinia mi, quis tempus sem diam at metus. Vivamus ut tellus eget orci placerat egestas. In vel lectus quis sem ultrices accumsan non et neque. Mauris viverra elit id scelerisque tempor. Aenean nec tellus a odio dictum tincidunt non vel ex.
-        </p>
+      <div className="row logos">
+        {logos.map((logo, index) => <Logo {...logo} key={index} />)}
       </div>
     </div>
+
   );
 }
