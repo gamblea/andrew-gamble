@@ -30,15 +30,62 @@
 
 }
 
-.me {
-  object-fit: cover;
-  width:500px;
-  height:500px;
-  border-radius:50% 50% 50% 50%;
+
+
+.meWrapper {
+  height: 50vh;
+
+  > .me {
+    object-fit: cover;
+    height: 50vh;
+    border-radius:50% 50% 50% 50%;
+  }
 }
 
 .logo {
   object-fit: cover;
-  width:200px;
-  height:200px;
+  width: 100%
+}
+
+.logoContainer {
+
+}
+
+.infoRow {
+  padding: 2em 1em;
+}
+
+.topApp {
+  padding: 1em;
+}
+
+.title {
+  text-align: center;
+  font-size: 4em;
+  margin-bottom: 0;
+
+  > a {
+    color: black;
+    padding-bottom: 0;
+    &:hover {
+      color: lighten(black, 20%);
+    }
+  }
+}
+
+.navbar {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.myHeader {
+  padding-bottom: 1em;
+}
+
+.nav-link-bigger {
+  font-size: 1.25em;
+}
+
+.header-break {
+  margin-top: 0;
 }
