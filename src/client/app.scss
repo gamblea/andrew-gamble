@@ -52,7 +52,7 @@
 .logo {
   margin: auto;
   object-fit: cover;
-  width: 100%
+  width: 75%;
 }
 
 .logoContainer {
@@ -80,7 +80,7 @@
 }
 
 .topApp {
-
+  padding-top: 0.5em;
 }
 
 .title {
@@ -115,7 +115,8 @@
 }
 
 .logos {
-  padding-top: 1em;
+  @include media-breakpoint-up(sm) { padding-top: 1em; }
+  padding-bottom: 1em;
 }
 
 .bioText {

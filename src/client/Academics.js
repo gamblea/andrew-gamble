@@ -9,7 +9,8 @@ export default function Academics() {
   const waterloo = {
     heading: 'University of Waterloo',
     subHeading: 'Honours of Computer Science, 2017-2022',
-    paragraph: 'Pursuing a bachelors of computer science degree with an option in digital hardware.',
+    paragraph: `Pursuing a bachelors of computer science degree with an option in digital hardware.
+                  Received Presidents Scholarship of Distinction. Cummulative GPA of 86%.`,
     photo: waterlooLogo
   };
   const sfu = {
