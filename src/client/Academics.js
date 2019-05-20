@@ -25,14 +25,12 @@ export default function Academics() {
     the oppurtunity to take University level courses.
     In addition, to Academics I was the captain of the senior boys volleyball and
     led the Fraser Heights Clean Water Club that raised funds and awareness
-    for clean water projects throughout the community. Graduated with a 97% average. Awarded the Bud Huzyk Passion for Mathematics Award  `,
+    for clean water projects throughout the community. Graduated with a 97% average. Awarded the Bud Huzyk Passion for Mathematics Award.`,
     photo: fhLogo
   };
 
   return (
     <div>
-      <h2>Academics</h2>
-      <hr />
       <InfoRow {...waterloo} />
       <InfoRow {...sfu} />
       <InfoRow {...fh} />
