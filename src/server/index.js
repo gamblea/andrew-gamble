@@ -12,4 +12,4 @@ app.get('/*', (req, res) => {
   res.sendFile('index.html', { root: path.join(__dirname, '../../dist') });
 });
 
-app.listen(process.env.PORT || 1373, () => console.log(`Listening on port ${process.env.PORT || 1373}!`));
+app.listen(process.env.PORT || 8080, () => console.log(`Listening on port ${process.env.PORT || 8080}!`));

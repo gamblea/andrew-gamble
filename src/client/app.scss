@@ -57,7 +57,8 @@
 
 .logoContainer {
   text-align: center;
-  padding: 1.75em;
+  @include media-breakpoint-up(sm) { padding: 1.75em; }
+
   overflow: hidden;
   
   & > a {
@@ -84,7 +85,7 @@
 
 .title {
   text-align: center;
-  font-size: 4em;
+  font-size: 2em;
   margin-bottom: 0;
 
   > a {
@@ -106,7 +107,7 @@
 }
 
 .nav-link-bigger {
-  font-size: 1em;
+  
 }
 
 .header-break {
