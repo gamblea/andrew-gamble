@@ -2,9 +2,8 @@
 
 @import "./variables.scss";
 
-
 .frontImage {
-  background: url('./images/mountain.jpg') no-repeat center center fixed;
+  background: url("./images/mountain.jpg") no-repeat center center fixed;
   background-blend-mode: darken;
   background-size: cover;
   width: 100&;
@@ -13,9 +12,8 @@
   top: 0;
   left: 0;
 
-
-  & > .frontText{
-    background-color: rbga(5,5,5, 0.2);
+  & > .frontText {
+    background-color: rbga(5, 5, 5, 0.2);
     left: 50%;
     top: 35%;
     transform: translate(-50%, -50%);
@@ -25,12 +23,8 @@
     h1 {
       font-size: 5em;
     }
-    
   }
-
 }
-
-
 
 .meWrapper {
   padding: 1em;
@@ -38,16 +32,14 @@
 
   > .me {
     object-fit: cover;
-    width:90%;
+    width: 90%;
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius:50% 50% 50% 50%;
+    border-radius: 50% 50% 50% 50%;
   }
 }
-
-
 
 .logo {
   margin: auto;
@@ -57,17 +49,19 @@
 
 .logoContainer {
   text-align: center;
-  @include media-breakpoint-up(sm) { padding: 1.75em; }
+  @include media-breakpoint-up(sm) {
+    padding: 1.75em;
+  }
 
   overflow: hidden;
-  
+
   & > a {
-    display:inline-block;
-    width:100%;
-    height:100%;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
   }
   img {
-    width:100%;
+    width: 100%;
     position: relative;
     top: 50%;
     left: 50%;
@@ -103,11 +97,9 @@
 }
 
 .myHeader {
-  
 }
 
 .nav-link-bigger {
-  
 }
 
 .header-break {
@@ -115,10 +107,31 @@
 }
 
 .logos {
-  @include media-breakpoint-up(sm) { padding-top: 1em; }
+  @include media-breakpoint-up(sm) {
+    padding-top: 1em;
+  }
   padding-bottom: 1em;
 }
 
 .bioText {
   margin: 0 1.5em;
+}
+
+.featureImg {
+  max-width: 100%;
+  max-height: 20vh;
+}
+
+.bottomLine {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.marginBotZero {
+  margin-bottom: 0;
+}
+
+.makeTextSmaller {
+  font-size: 0.9em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
