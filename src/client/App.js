@@ -1,17 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 // import './bootstrap.css';
-import './app.scss';
-import Header from './Header';
-import Main from './Main';
-/*
- <div>
-      <div className="frontImage">
-        <div className="frontText">
-          <h1>-- ANDREW&nbsp; GAMBLE --</h1>
-        </div>
-      </div>
-*/
+import "./app.scss";
+import Header from "./Header";
+import Main from "./Main";
 
 export default function App() {
   return (
