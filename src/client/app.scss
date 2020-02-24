@@ -118,8 +118,7 @@
 }
 
 .featureImg {
-  max-width: 100%;
-  max-height: 20vh;
+  width: 100%;
 }
 
 .bottomLine {
@@ -134,4 +133,36 @@
   font-size: 0.9em;
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.postTitle {
+  width: 80vh;
+  padding: 0.5em;
+
+  p {
+    color: white;
+    font-size: 2.6em;
+    z-index: 1000;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+
+  img {
+    -webkit-filter: blur(3px);
+    filter: blur(3px), brightness(75%);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+
+  &:hover {
+    p {
+      color: white;
+      font-size: 2.2em;
+      z-index: 1000;
+    }
+    img {
+      -webkit-filter: blur(0);
+      filter: blur(3px), brightness(100%);
+    }
+  }
 }

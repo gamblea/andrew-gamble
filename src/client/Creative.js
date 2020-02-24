@@ -23,10 +23,11 @@ export default function Creative() {
     <div>
       <Switch>
         <Route exact path={path}>
-          <h2>Posts</h2>
-          {posts.map((post, i) => (
-            <PostTitle {...post} key={i} />
-          ))}
+          <div className="d-flex flex-wrap justify-content-center">
+            {posts.map((post, i) => (
+              <PostTitle {...post} key={i} />
+            ))}
+          </div>
         </Route>
         <Route path={`${path}/:postId`}>
           <Post />
@@ -42,13 +43,12 @@ export function PostTitle(props) {
   let { path, url } = useRouteMatch();
 
   return (
-    <div>
-      <Link to={`${url}/${postId}`}>
-        <h4>{title}</h4>
-      </Link>
-      <p>{date}</p>
-      <img className="featureImg" src={feature_img_uri} />
-    </div>
+    <Link to={`${url}/${postId}`}>
+      <div className="d-flex justify-content-center align-items-center postTitle">
+        <p className="position-absolute titleText">{title}</p>
+        <img className="w-100" src={feature_img_uri} />
+      </div>
+    </Link>
   );
 }
 
