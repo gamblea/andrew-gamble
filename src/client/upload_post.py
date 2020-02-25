@@ -25,19 +25,22 @@ def main():
 
         for file_name in files:
             if file_name.endswith(".jpg"):
-                im = Image.open(os.path.join(root, file_name))
-                width, height = im.size
-
-                if width > height:
-                    width =  4
-                    height = 3
-                elif width == height:
-                    width = 1
-                    height = 1
+                if "custom_dims" in post and file_name in post["custom_dims"]:
+                    width = post["custom_dims"][file_name]["width"]
+                    height = post["custom_dims"][file_name]["height"]
                 else:
-                    width = 3
-                    height = 4
-                
+                    im = Image.open(os.path.join(root, file_name))
+                    width, height = im.size
+                    if width > height:
+                        width =  4
+                        height = 3
+                    elif width == height:
+                        width = 1
+                        height = 1
+                    else:
+                        width = 3
+                        height = 4
+
                 file_uri = os.path.join(S3_BASE_PATH, post_name, file_name)
                 if "feature_img" in post and post["feature_img"] == file_name:
                     post["feature_img_uri"] = file_uri
