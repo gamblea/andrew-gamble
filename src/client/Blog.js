@@ -15,7 +15,7 @@ let posts_dict = {};
 
 posts.forEach(post => (posts_dict[post.postId] = post));
 
-export default function Creative() {
+export default function Blog() {
   let { path, url } = useRouteMatch();
   posts.sort((a, b) => (a.date < b.date ? 1 : -1));
 
