@@ -2,3 +2,6 @@
 node_modules
 *.log
 yarn.lock
+src/client/posts.json
+dist
+src/client/posts/.DS_Store

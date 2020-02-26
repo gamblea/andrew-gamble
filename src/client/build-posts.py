@@ -7,8 +7,9 @@ S3_BASE_PATH = "https://s3-us-west-1.amazonaws.com/www.andrewgamble.ca/posts/"
 
 def main():
     parent_path = pathlib.Path(__file__).parent
+    print()
     posts_path = os.path.join(parent_path, "posts")
-
+    output_path = os.path.join(parent_path, "posts.json")
 
     posts = []
     for root, dirs, files in os.walk(posts_path, topdown=False):
@@ -57,7 +58,7 @@ def main():
         if "postId" in post:
             posts.append(post)
 
-    with open('posts.json', 'w', encoding='utf-8') as f:
+    with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(posts, f, ensure_ascii=False, indent=4)
 
 
