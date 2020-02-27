@@ -22,9 +22,6 @@ export default function Header() {
               >
                 Academics
               </Link>
-              <Link className="nav-link-bigger nav-item nav-link" to="/Code">
-                Code
-              </Link>
               <Link className="nav-link-bigger nav-item nav-link" to="/blog">
                 Blog
               </Link>
