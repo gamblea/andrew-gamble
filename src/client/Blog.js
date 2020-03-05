@@ -6,8 +6,10 @@ import {
   Link,
   useParams
 } from "react-router-dom";
+
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
+import { useMediaQuery } from "react-responsive";
 
 import posts from "./posts.json";
 
@@ -69,16 +71,24 @@ export function Post() {
   let { postId } = useParams();
   if (!postId) return null;
   else {
-    let { title, text, photos, date } = posts_dict[postId];
-    console.log(photos);
+    let { title, text, photos, date, googleMapUri = undefined } = posts_dict[
+      postId
+    ];
 
     return (
       <div>
         <div className="d-flex bottomLine">
           <h3 className="mt-auto marginBotZero">{title}</h3>
-          <h7 className="ml-auto mt-auto">{date}</h7>
+          <h6 className="ml-auto mt-auto mb-0">{date}</h6>
         </div>
         <p className="makeTextSmaller">{text}</p>
+        <div className="d-flex justify-content-center align-items-center">
+          {googleMapUri ? (
+            <div className="overflow-hidden">
+              <GoogleMap src={googleMapUri}></GoogleMap>
+            </div>
+          ) : null}
+        </div>
         <div>
           <Gallery photos={photos} onClick={openLightbox} />
           <ModalGateway>
@@ -98,4 +108,18 @@ export function Post() {
       </div>
     );
   }
+}
+
+export function GoogleMap(props) {
+  const isMobile = useMediaQuery({ query: "(max-width: 700px)" });
+
+  return (
+    <div>
+      {isMobile ? (
+        <iframe src={props.src} width="300" height="200"></iframe>
+      ) : (
+        <iframe src={props.src} width="640" height="480"></iframe>
+      )}
+    </div>
+  );
 }

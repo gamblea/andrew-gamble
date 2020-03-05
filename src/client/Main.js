@@ -5,7 +5,6 @@ import Academics from "./Academics";
 import Blog from "./Blog";
 
 import posts from "./posts.json";
-console.log(posts);
 
 export default function Main() {
   return (
