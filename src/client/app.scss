@@ -106,12 +106,16 @@
 }
 
 .postTitle {
-  width: 80vh;
+  $breakpoint-tablet: 768px;
+  @media (min-width: $breakpoint-tablet) {
+    width: 40vw;
+  }
+
   padding: 0.5em;
 
   p {
     color: white;
-    font-size: 2.6em;
+    font-size: 2em;
     z-index: 1000;
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
@@ -128,7 +132,7 @@
   &:hover {
     p {
       color: white;
-      font-size: 2.2em;
+      font-size: 1.5em;
       z-index: 1000;
     }
     img {
