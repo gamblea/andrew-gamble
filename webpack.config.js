@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, outputDirectory),
     filename: "bundle.js",
-    publicPath: "http://www.andrewgamble.ca/"
+    publicPath: "https://d1t5sghzsglumf.cloudfront.net/"
   },
   module: {
     rules: [
