@@ -9,7 +9,7 @@
     "update-dist": "export AWS_PROFILE=gamblea && aws s3 sync dist  s3://www.andrewgamble.ca/",
     "refresh_cdn": "export AWS_PROFILE=gamblea && aws cloudfront create-invalidation --distribution-id EFBZ61K0GU2U3 --paths '/*'",
     "build": "webpack --mode production",
-    "deploy": "npm-run-all --parallel build build-posts --parallel update-posts update-dist",
+    "deploy": "npm-run-all --sequential build-posts build --parallel update-posts update-dist",
     "start": "node src/server/index.js",
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "server": "nodemon src/server/index.js",

@@ -26,6 +26,11 @@ def main():
 
         for file_name in files:
             if file_name.endswith(".jpg"):
+                long_edge = 4
+                short_edge = 3
+                if "override_dims" in post:
+                    long_edge = post["override_dims"]["long"]
+                    short_edge = post["override_dims"]["short"]
                 if "custom_dims" in post and file_name in post["custom_dims"]:
                     width = post["custom_dims"][file_name]["width"]
                     height = post["custom_dims"][file_name]["height"]
@@ -33,14 +38,14 @@ def main():
                     im = Image.open(os.path.join(root, file_name))
                     width, height = im.size
                     if width > height:
-                        width =  4
-                        height = 3
+                        width = long_edge
+                        height = short_edge
                     elif width == height:
                         width = 1
                         height = 1
                     else:
-                        width = 3
-                        height = 4
+                        width = short_edge
+                        height = long_edge
 
                 file_uri = os.path.join(S3_BASE_PATH, post_name, file_name)
                 if "feature_img" in post and post["feature_img"] == file_name:
