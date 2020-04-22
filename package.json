@@ -5,9 +5,9 @@
   "main": "src/server/index.js",
   "scripts": {
     "build-posts": "python3 src/client/build-posts.py",
-    "update-posts": "aws s3 sync src/client/posts s3://www.andrewgamble.ca/posts",
-    "update-dist": "aws s3 sync dist  s3://www.andrewgamble.ca/",
-    "refresh_cdn": "aws cloudfront create-invalidation --distribution-id EFBZ61K0GU2U3 --paths '/*'",
+    "update-posts": "aws s3 sync src/client/posts s3://www.andrewgamble.com/posts",
+    "update-dist": "aws s3 sync dist  s3://www.andrewgamble.com/",
+    "refresh_cdn": "aws cloudfront create-invalidation --distribution-id E30N02I5OU9SM1 --paths '/*'",
     "build": "webpack --mode production",
     "deploy": "npm-run-all --sequential build-posts build --parallel update-posts update-dist",
     "start": "node src/server/index.js",
